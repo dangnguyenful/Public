@@ -1,4 +1,7 @@
 pipeline {
+    agent {
+		label 'java-slave-auto' 
+    }
     stages {
         stage('Build-Java') {
             steps {
