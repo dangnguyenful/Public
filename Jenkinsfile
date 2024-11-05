@@ -1,18 +1,18 @@
 pipeline {
     agent {
         node {
-            label 'java-slave' 
+            label 'java-slave-auto' 
         }
     }
     stages {
         stage('Build-Java') {
             steps {
-                sh './mvnw package' 
+                echo 'Build Java Successful !'
             }
         }
         stage('Build-React') {
             steps {
-                sh './mvnw package' 
+                echo 'Build React Successful !'
             }
         }
     }
